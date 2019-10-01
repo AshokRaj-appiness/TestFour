@@ -1,5 +1,29 @@
 apply plugin: 'com.android.library'
 
+ext{
+    bintrayRepo = 'maven'
+    bintrayName = 'multiplylibrary'
+
+    publishedGroupId = 'com.example.multiply'
+    libraryName = 'multiply'
+    artifact = 'multiply'
+
+    libraryDescription = 'A widget to multiply two numbers.'
+
+    siteUrl = 'https://github.com/AshokRaj-appiness/TestFour'
+    gitUrl = 'https://github.com/AshokRaj-appiness/TestFour.git'
+
+    libraryVersion = '1.0.0'
+
+    developerId = 'ashokraj-appiness'
+    developerName = 'ashokraj-appiness'
+    developerEmail = 'ashokraj@appinessworld.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.1"
@@ -32,3 +56,5 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 }
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
